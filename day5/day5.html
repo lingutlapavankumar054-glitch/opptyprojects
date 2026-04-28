@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Cards</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            margin: 20px;
+        }
+        .card {
+            border: 1px solid rgb(238, 96, 96);
+            padding: 15px;
+            width: 200px;
+            position: relative;
+            color: rgb(39, 130, 170);
+            margin-left: 150px;
+        }
+        .badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgb(8, 8, 8);
+            color: rgb(251, 158, 107);
+            padding: 3px 7px;
+        }
+        .msg1 {
+            visibility: hidden;
+        }
+        .msg2 {
+            display: none;
+        }
+        .card:hover .msg1 {
+            visibility: visible;
+            color: rgb(244, 147, 112);
+        }
+
+        .card:hover .msg2 {
+            display: block;
+            color: rgb(242, 150, 116);
+        }
+        button{
+            background-color: black;
+            color: rgb(238, 146, 113);
+            border-radius: 20px;
+        }
+        .help {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        Notification Bar
+    </header>
+    <div class="container">
+
+        <div class="card">
+            <span class="badge">1</span>
+            <h3>Notification</h3>
+            <p>You have messages</p>
+            <button>Open</button>
+
+            <p class="msg1">Hi This is Pavan</p>
+            <p class="msg2">Iam in Hyderabad</p>
+        </div>
+
+        <div class="card">
+            <span class="badge">2</span>
+            <h3>Emails</h3>
+            <p>Check emails</p>
+            <button>Open</button>
+
+            <p class="msg1">HR From OPPTY</p>
+            <p class="msg2">You are appointed as a traniee</p>
+        </div>
+
+        <div class="card">
+            <span class="badge">3</span>
+            <h3>Alerts</h3>
+            <p>System alerts</p>
+            <button>Open</button>
+
+            <p class="msg1">Windows 11 PRO Update</p>
+            <p class="msg2">Enter to Update</p>
+        </div>
+
+    </div>
+    <button class="help">Help</button>
+
+</body>
+</html>
